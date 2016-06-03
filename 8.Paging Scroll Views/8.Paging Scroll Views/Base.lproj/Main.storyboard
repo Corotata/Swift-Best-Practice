@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="__Paging_Scroll_Views" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pxf-8E-UgQ">
+                                <rect key="frame" x="-10" y="0.0" width="620" height="600"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pxf-8E-UgQ" secondAttribute="trailing" constant="-10" id="dRy-03-MIO"/>
+                            <constraint firstItem="pxf-8E-UgQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="hXr-dG-BiP"/>
+                            <constraint firstItem="pxf-8E-UgQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-10" id="i3I-ck-pOR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pxf-8E-UgQ" secondAttribute="bottom" id="piO-9N-VBz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="pxf-8E-UgQ" id="VX0-Z2-wBe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="1LV-Xc-7ux">
+            <objects>
+                <viewController storyboardIdentifier="detailViewController" id="RDO-XO-4zO" customClass="DetailViewController" customModule="__Paging_Scroll_Views" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xUq-dP-Jb4"/>
+                        <viewControllerLayoutGuide type="bottom" id="QUt-P1-zAi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ow3-PU-0Hu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TDB-UX-a1P">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TDB-UX-a1P" secondAttribute="trailing" id="EJh-xc-B1D"/>
+                            <constraint firstItem="TDB-UX-a1P" firstAttribute="leading" secondItem="Ow3-PU-0Hu" secondAttribute="leading" id="WtA-1f-m9I"/>
+                            <constraint firstItem="TDB-UX-a1P" firstAttribute="top" secondItem="xUq-dP-Jb4" secondAttribute="bottom" constant="-20" id="XdK-x7-Xzh"/>
+                            <constraint firstItem="QUt-P1-zAi" firstAttribute="top" secondItem="TDB-UX-a1P" secondAttribute="bottom" id="x0C-sn-zSv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="TDB-UX-a1P" id="R1i-1B-LJL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R6q-VN-t3f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="273" y="1114"/>
+        </scene>
+    </scenes>
+</document>

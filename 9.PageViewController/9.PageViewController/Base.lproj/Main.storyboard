@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6gz-oK-bAX">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="YQi-D2-P9i">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="20" navigationOrientation="horizontal" spineLocation="none" id="6gz-oK-bAX" customClass="ViewController" customModule="__PageViewController" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jgh-Ax-a38" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684" y="424"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Nq0-6z-OJy">
+            <objects>
+                <viewController storyboardIdentifier="detailViewController" id="xHB-3O-M8M" customClass="DetailViewController" customModule="__PageViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bqg-sF-aa4"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yxw-YZ-oTO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r4r-GR-xTY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hHm-TH-1Az">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="RBb-98-Lmy">
+                                <rect key="frame" x="273" y="555" width="55" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.14901960780000001" green="0.73333333329999995" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RBb-98-Lmy" firstAttribute="centerX" secondItem="r4r-GR-xTY" secondAttribute="centerX" id="0hU-Y5-z4S"/>
+                            <constraint firstAttribute="trailing" secondItem="hHm-TH-1Az" secondAttribute="trailing" id="2D9-RE-qwQ"/>
+                            <constraint firstItem="Yxw-YZ-oTO" firstAttribute="top" secondItem="hHm-TH-1Az" secondAttribute="bottom" id="4dj-5u-HPE"/>
+                            <constraint firstItem="hHm-TH-1Az" firstAttribute="top" secondItem="Bqg-sF-aa4" secondAttribute="bottom" constant="-20" id="9NL-s6-N1k"/>
+                            <constraint firstItem="Yxw-YZ-oTO" firstAttribute="top" secondItem="RBb-98-Lmy" secondAttribute="bottom" constant="8" id="DwC-dD-xjY"/>
+                            <constraint firstItem="hHm-TH-1Az" firstAttribute="leading" secondItem="r4r-GR-xTY" secondAttribute="leading" id="seM-UG-Nn7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="hHm-TH-1Az" id="sQ7-Yo-UYp"/>
+                        <outlet property="pageControl" destination="RBb-98-Lmy" id="mtS-Jc-gu7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RL0-UL-kd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684" y="1116"/>
+        </scene>
+    </scenes>
+</document>
